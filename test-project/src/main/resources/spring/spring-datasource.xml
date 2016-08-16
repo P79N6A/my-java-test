@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:property-placeholder location="classpath:props/dal.properties" />
+	<!-- BoneCP configuration -->
+	<bean id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="${db.driverClass}" />
+		<property name="jdbcUrl" value="${db.jdbcUrl}" />
+		<property name="username" value="${db.username}" />
+		<property name="password" value="${db.password}" />
+		<!-- <property name="idleConnectionTestPeriod" value="${db.idleConnectionTestPeriod}" 
+			/> -->
+		<property name="idleConnectionTestPeriodInSeconds" value="${db.idleConnectionTestPeriodInSeconds}" />
+		<!-- <property name="idleMaxAge" value="${db.idleMaxAge}" /> -->
+		<property name="idleMaxAgeInSeconds" value="${db.idleMaxAgeInSeconds}" />
+		<property name="maxConnectionsPerPartition" value="${db.maxConnectionsPerPartition}" />
+		<property name="minConnectionsPerPartition" value="${db.minConnectionsPerPartition}" />
+		<property name="partitionCount" value="${db.partitionCount}" />
+		<property name="acquireIncrement" value="${db.acquireIncrement}" />
+		<property name="statementsCacheSize" value="${db.statementsCacheSize}" />
+		<property name="releaseHelperThreads" value="${db.releaseHelperThreads}" />
+		<property name="logStatementsEnabled" value="${db.logStatementsEnabled}" />
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+</beans>

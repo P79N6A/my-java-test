@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test">
+	<resultMap type="priv.zc.user.entity.User" id="userMap">
+		<id column="id" property="id" />
+		<result column="username" property="username"/>
+		<result column="password" property="password"/>
+		<result column="add_time" property="addTime"/>
+		<result column="update_time" property="updateTime"/>
+		<result column="age" property="age"/>
+	</resultMap>
+	
+	<insert id="addUser" parameterType="user">
+		insert into user values(null,#{username},#{password},#{age},#{addTime},#{updateTime})
+	</insert>
+	
+	<delete id="deleteUser" parameterType="user">
+		delete from user where id=#{id}
+	</delete>
+	
+	<update id="updateUser" parameterType="user">
+		update user set username=#{username},password=#{password},age=#{age},add_time=#{addTime},update_time=#{updateTime}
+	</update>
+	
+	<select id="getUser" parameterType="user" resultMap="userMap">
+		select * from user where id=#{id}
+	</select>
+	
+	<select id="selectUserList" parameterType="user" resultMap="userMap">
+		select * from user
+	</select>
+</mapper>
