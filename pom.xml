@@ -11,5 +11,6 @@
 		<module>cglib-test</module>
 		<module>mybatis-test</module>
 		<module>subscribe-system</module>
+		<module>autosign-system</module>
 	</modules>
 </project>
