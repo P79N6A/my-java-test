@@ -28,6 +28,8 @@ public class SignInfoServiceImpl implements SignInfoService {
 
     @Override
     public int insert(SignInfo signInfo) {
+        signInfo.setCreateTime(new Date());
+        signInfo.setUpdateTime(signInfo.getCreateTime());
         return signInfoMapper.insert(signInfo);
     }
 

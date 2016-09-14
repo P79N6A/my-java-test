@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <form id="pagerForm" method="post" action="demo_page1.html">
     <input type="hidden" name="status" value="${param.status}">
@@ -12,7 +13,7 @@
 <div class="pageContent">
     <div class="panelBar">
         <ul class="toolBar">
-            <li><a class="add" href="add" target="navTab"><span>添加</span></a></li>
+            <li><a class="add" href="/signInfo/add" target="dialog" mask="true" title="新增"><span>添加</span></a></li>
         </ul>
     </div>
     <table class="table" width="100%" layoutH="138">
@@ -32,8 +33,8 @@
             <td>${row.id}</td>
             <td>${row.signUrl}</td>
             <td>${row.cookie}</td>
-            <td>${row.createTime}</td>
-            <td>${row.updateTime}</td>
+            <td><fmt:formatDate value="${row.createTime}" type="both" /></td>
+            <td><fmt:formatDate value="${row.updateTime}" type="both" /></td>
             <td><a href="signInfo/exec/${row.id}" target="ajaxTodo">签到</a></td>
         </tr>
         </c:forEach>
