@@ -9,4 +9,10 @@ public interface SignInfoService {
 	int insert(SignInfo signInfo);
 	List<SignInfo> select();
 	ResultVo exec(Long id);
+
+    int delete(Long id);
+
+    SignInfo select(Long id);
+
+	boolean update(SignInfo signInfo);
 }

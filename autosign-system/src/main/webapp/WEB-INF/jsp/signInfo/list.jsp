@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<form id="pagerForm" method="post" action="demo_page1.html">
+<form id="pagerForm" method="post" action="/signInfo/list">
     <input type="hidden" name="status" value="${param.status}">
     <input type="hidden" name="keywords" value="${param.keywords}" />
     <input type="hidden" name="pageNum" value="1" />
@@ -14,6 +14,8 @@
     <div class="panelBar">
         <ul class="toolBar">
             <li><a class="add" href="/signInfo/add" target="dialog" mask="true" title="新增"><span>添加</span></a></li>
+            <li><a class="delete" href="/signInfo/delete/{id}" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+            <li><a class="edit" href="/signInfo/update/{id}" target="dialog" mask="true" title="修改"><span>修改</span></a></li>
         </ul>
     </div>
     <table class="table" width="100%" layoutH="138">
@@ -29,13 +31,13 @@
         </thead>
         <tbody>
         <c:forEach items="${list}" var="row">
-        <tr target="sid_user" rel="9">
+        <tr target="id" rel="${row.id}">
             <td>${row.id}</td>
             <td>${row.signUrl}</td>
             <td>${row.cookie}</td>
             <td><fmt:formatDate value="${row.createTime}" type="both" /></td>
             <td><fmt:formatDate value="${row.updateTime}" type="both" /></td>
-            <td><a href="signInfo/exec/${row.id}" target="ajaxTodo">签到</a></td>
+            <td><a class="button" href="signInfo/exec/${row.id}" target="ajaxTodo"><span>签到</span></a></td>
         </tr>
         </c:forEach>
         </tbody>

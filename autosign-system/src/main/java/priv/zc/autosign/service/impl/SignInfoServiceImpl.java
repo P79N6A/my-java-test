@@ -57,4 +57,19 @@ public class SignInfoServiceImpl implements SignInfoService {
         return ResultVo.success(result);
     }
 
+    @Override
+    public int delete(Long id) {
+        return signInfoMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public SignInfo select(Long id) {
+        return signInfoMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public boolean update(SignInfo signInfo) {
+        return signInfoMapper.updateByPrimaryKeySelective(signInfo)==1;
+    }
+
 }

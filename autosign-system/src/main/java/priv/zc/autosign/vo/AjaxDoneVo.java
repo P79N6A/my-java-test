@@ -94,7 +94,6 @@ public class AjaxDoneVo {
         AjaxDoneVo vo = new AjaxDoneVo();
         vo.statusCode = "200";
         vo.message = "操作成功";
-        vo.callbackType = CALLBACK_TYPE_CLOSE_CURRENT;
         return vo;
     }
 

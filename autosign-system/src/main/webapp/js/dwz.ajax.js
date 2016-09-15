@@ -128,7 +128,7 @@ function navTabAjaxDone(json){
 			navTab.reloadFlag(json.navTabId);
 		} else { //重新载入当前navTab页面
 			var $pagerForm = $("#pagerForm", navTab.getCurrentPanel());
-			var args = $pagerForm.size()>0 ? $pagerForm.serializeArray() : {}
+			var args = $pagerForm.sijaxze()>0 ? $pagerForm.serializeArray() : {}
 			navTabPageBreak(args, json.rel);
 		}
 		
