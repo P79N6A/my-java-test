@@ -17,6 +17,7 @@ public class AjaxDoneVo {
      */
 
     public static final String CALLBACK_TYPE_CLOSE_CURRENT = "closeCurrent";
+    public static final String STATUS_CODE_SUCCESS = "200";
 
     private String statusCode = "";
     private String message = "";

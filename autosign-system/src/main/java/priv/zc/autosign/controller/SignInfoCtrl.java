@@ -84,8 +84,10 @@ public class SignInfoCtrl {
 
     @RequestMapping("exec/{id}")
     @ResponseBody
-    public ResultVo exec(@PathVariable Long id) {
-        return signInfoService.exec(id);
+    public AjaxDoneVo exec(@PathVariable Long id) {
+        ResultVo resultVo = signInfoService.exec(id);
+        AjaxDoneVo vo = new AjaxDoneVo(AjaxDoneVo.STATUS_CODE_SUCCESS, String.valueOf(resultVo.getData()));
+        return vo;
     }
 
     @RequestMapping("delete/{id}")

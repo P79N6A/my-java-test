@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import priv.zc.autosign.dao.SignInfoMapper;
 import priv.zc.autosign.dao.SignLogMapper;
 import priv.zc.autosign.model.SignInfo;
+import priv.zc.autosign.model.SignInfoCriteria;
 import priv.zc.autosign.model.SignLog;
 import priv.zc.autosign.service.SignInfoService;
 import priv.zc.autosign.util.HttpUtils;
@@ -35,7 +36,9 @@ public class SignInfoServiceImpl implements SignInfoService {
 
     @Override
     public List<SignInfo> select() {
-        return signInfoMapper.selectByExample(null);
+        SignInfoCriteria criteria= new SignInfoCriteria();
+        criteria.setOrderByClause("id desc");
+        return signInfoMapper.selectByExample(criteria);
     }
 
     @Override
