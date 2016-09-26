@@ -38,5 +38,10 @@
 		</javaClientGenerator>
 		<table tableName="sign_info"/>
 		<table tableName="sign_log"/>
+		<table tableName="user"/>
+		<table tableName="role"/>
+		<table tableName="user_roles"/>
+		<table tableName="permission"/>
+		<table tableName="role_permissions"/>
 	</context>
 </generatorConfiguration> 

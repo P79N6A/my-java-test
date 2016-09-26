@@ -13,5 +13,6 @@
 	<context:component-scan base-package="priv.zc.*.service" />
 	<import resource="spring-datasource.xml" />
 	<import resource="spring-mybatis.xml" />
+	<import resource="spring-shiro.xml" />
 
 </beans>  
