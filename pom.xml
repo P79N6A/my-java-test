@@ -13,5 +13,7 @@
 		<module>subscribe-system</module>
 		<module>autosign-system</module>
 		<module>leetcode</module>
+		<module>mutithread</module>
+		<module>test-rpc</module>
 	</modules>
 </project>
