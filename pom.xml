@@ -12,5 +12,6 @@
 		<module>mybatis-test</module>
 		<module>subscribe-system</module>
 		<module>autosign-system</module>
+		<module>leetcode</module>
 	</modules>
 </project>
