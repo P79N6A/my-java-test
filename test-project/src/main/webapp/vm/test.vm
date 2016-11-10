@@ -1,0 +1,7 @@
+<html>
+<body>
+    #set( $foo = "VM Test" )
+Hello $foo World!
+<p>Hello $name</p>
+</body>
+</html>
