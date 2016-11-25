@@ -83,7 +83,7 @@ public class EleTest {
         for (int i = 0; i < 5; i++) {
             int offset = 24 * i;
             try {
-                String url=baseUrl.replaceAll("","");
+                String url=baseUrl.replaceAll("offset=\\d+","offset="+offset);
                 FileUtils.copyURLToFile(new URL(url), new File(path + i + ".json"));
                 //Request.Get(bUrl+offset).execute().saveContent(new File(path+i+".json"));
             } catch (IOException e) {
