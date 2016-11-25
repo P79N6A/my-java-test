@@ -7,16 +7,28 @@ import org.junit.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class EleTest {
+    static String path = "/Users/baidu/Desktop/ele/";
+    static String exportFile = "/Users/baidu/Desktop/ele.csv";
+    static String baseUrl ="https://mainsite-restapi.ele.me/shopping/restaurants?extras%5B%5D=activities&geohash=wx4expyp0dh&latitude=40.03402&limit=24&longitude=116.33151&offset=0";
     public static void main(String[] args) throws IOException {
         //https://mainsite-restapi.ele.me/shopping/restaurants?offset=0&extras%5B%5D=activities&geohash=wx4expyp0dh&latitude=40.03402&limit=24&longitude=116.33151
-        String path = "/Users/baidu/Desktop/ele/";
+        if (download()) {
+            String result = parseJson();
+            FileUtils.writeStringToFile(new File(exportFile), result, "GBK");
+        }
+
+
+    }
+
+    public static String parseJson() throws IOException {
         File dir = new File(path);
         if (!dir.isDirectory()) {
-            return;
+            return "";
         }
         StringBuilder sb = new StringBuilder();
         sb.append("id").append(",");
@@ -30,6 +42,10 @@ public class EleTest {
         sb.append("优惠力度");
         sb.append("\n");
         for (File file : dir.listFiles()) {
+            if (!file.getName().endsWith(".json")) {
+                continue;
+            }
+            System.out.println(file.getName());
             String s = FileUtils.readFileToString(file);
             JSONArray array = JSONArray.parseArray(s);
             for (int i = 0; i < array.size(); i++) {
@@ -60,8 +76,27 @@ public class EleTest {
                 sb.append("\n");
             }
         }
-        FileUtils.writeStringToFile(new File("/Users/baidu/Desktop/ele.csv"),sb.toString(),"GBK");
+        return sb.toString();
+    }
 
+    public static boolean download() {
+        for (int i = 0; i < 5; i++) {
+            int offset = 24 * i;
+            try {
+                String url=baseUrl.replaceAll("","");
+                FileUtils.copyURLToFile(new URL(url), new File(path + i + ".json"));
+                //Request.Get(bUrl+offset).execute().saveContent(new File(path+i+".json"));
+            } catch (IOException e) {
+                e.printStackTrace();
+                return false;
+            }
+        }
+        return true;
+    }
+
+    @Test
+    public void regTest(){
+        System.out.println(baseUrl.replaceAll("offset=\\d+","offset=1"));
     }
 
     @Test
