@@ -11,7 +11,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:spring-redis.xml")
+@ContextConfiguration(locations = "classpath:spring/spring-redis.xml")
 public class RedisServiceTest {
 	@Resource
 	private RedisTemplate<String, Object> redisTemplate;
@@ -21,6 +21,7 @@ public class RedisServiceTest {
 		Set<String> keys = redisTemplate.keys("*");
 		for (String key : keys) {
 			System.out.println(key);
+			System.out.println(redisTemplate.opsForValue().get(key));
 		}
 	}
 

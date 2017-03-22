@@ -15,5 +15,6 @@
 		<module>leetcode</module>
 		<module>mutithread</module>
 		<module>test-rpc</module>
+		<module>dynamic</module>
 	</modules>
 </project>
