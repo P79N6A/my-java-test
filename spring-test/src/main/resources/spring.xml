@@ -18,4 +18,6 @@
     	<aop:pointcut expression="execution(public * *(..))" id="aopTest" />
     	<aop:advisor pointcut-ref="aopTest" advice-ref="aopAdvisor"/>
     </aop:config>
+
+	<import resource="spring-bean.xml"/>
 </beans>
