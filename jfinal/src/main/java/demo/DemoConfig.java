@@ -7,16 +7,18 @@ import com.jfinal.config.JFinalConfig;
 import com.jfinal.config.Plugins;
 import com.jfinal.config.Routes;
 import com.jfinal.core.JFinal;
+import com.jfinal.render.ViewType;
 import com.jfinal.template.Engine;
 
 public class DemoConfig extends JFinalConfig {
     public static void main(String[] args) {
-        JFinal.start("src/main/webapp", 8080, "/",5);
+        JFinal.start("jfinal/src/main/webapp", 8080, "/");
     }
 
     @Override
     public void configConstant(Constants me) {
         me.setDevMode(true);
+        me.setViewType(ViewType.JSP);
     }
 
     @Override

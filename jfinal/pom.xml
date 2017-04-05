@@ -19,7 +19,11 @@
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>com.jfinal</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>8.1.8</version>
+        </dependency>
 
     </dependencies>
     <build>
