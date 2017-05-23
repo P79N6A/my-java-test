@@ -17,6 +17,11 @@
             <groupId>org.apache.storm</groupId>
             <artifactId>storm-core</artifactId>
         </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
     <build>
 

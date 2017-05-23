@@ -7,7 +7,7 @@ import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by zongchao on 17/4/5.
+ * 17/4/5.
  */
 @Component
 public class Scan2Bean {

@@ -3,7 +3,7 @@ package priv.zc.user.bean;
 import org.apache.log4j.Logger;
 
 /**
- * Created by zongchao on 17/4/5.
+ * 17/4/5.
  */
 public class XmlBean {
     private Logger logger = Logger.getLogger(XmlBean.class);

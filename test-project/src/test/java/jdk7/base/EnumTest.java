@@ -1,7 +1,7 @@
 package jdk7.base;
 
 /**
- * Created by zongchao on 17/2/28.
+ * 17/2/28.
  */
 public class EnumTest {
     public enum Type{

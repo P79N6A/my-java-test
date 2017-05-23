@@ -6,7 +6,7 @@ import org.junit.Test;
 import thread.SimpleT;
 
 /**
- * Created by zongchao on 17/3/31.
+ * 17/3/31.
  */
 public class PoolTest {
 

@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 import thread.SimpleT;
 
 /**
- * Created by zongchao on 17/3/31.
+ * 17/3/31.
  */
 public class Main {
 
