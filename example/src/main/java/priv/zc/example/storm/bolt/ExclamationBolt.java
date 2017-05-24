@@ -21,13 +21,13 @@ public class ExclamationBolt implements IRichBolt {
 
     @Override
     public void prepare(Map map, TopologyContext topologyContext, OutputCollector outputCollector) {
-        logger.debug("prepare");
+        logger.info("prepare");
         _collector = outputCollector;
     }
 
     @Override
     public void execute(Tuple tuple) {
-        logger.debug("execute");
+        logger.info("execute");
         _collector.emit(tuple, new Values(tuple.getString(0) + "!!!"));
         _collector.ack(tuple);
     }
@@ -39,14 +39,14 @@ public class ExclamationBolt implements IRichBolt {
 
     @Override
     public void declareOutputFields(OutputFieldsDeclarer outputFieldsDeclarer) {
-        logger.debug("declareOutputFields");
+        logger.info("declareOutputFields");
         outputFieldsDeclarer.declare(new Fields("word"));
 
     }
 
     @Override
     public Map<String, Object> getComponentConfiguration() {
-        logger.debug("getComponentConfiguration");
+        logger.info("getComponentConfiguration");
         return null;
     }
 }
