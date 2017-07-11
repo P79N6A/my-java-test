@@ -11,7 +11,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 /**
- * Created by zongchao on 17/1/6.
+ * 17/1/6.
  */
 public class GsonTest {
     @Test

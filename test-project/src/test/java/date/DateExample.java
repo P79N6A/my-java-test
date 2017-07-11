@@ -3,7 +3,7 @@ package date;
 import java.util.Date;
 
 /**
- * Created by zongchao on 17/1/13.
+ * 17/1/13.
  */
 public class DateExample {
     public static void main(String[] args) {

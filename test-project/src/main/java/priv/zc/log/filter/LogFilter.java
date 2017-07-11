@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by zongchao on 16/11/12.
+ * 16/11/12.
  */
 public class LogFilter implements Filter {
     private static final Logger log = LoggerFactory.getLogger(LogFilter.class);

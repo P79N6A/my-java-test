@@ -1,7 +1,7 @@
 package priv.zc.autosign.vo;
 
 /**
- * Created by zongchao on 16/9/14.
+ * 16/9/14.
  */
 public class AjaxDoneVo {
     /**

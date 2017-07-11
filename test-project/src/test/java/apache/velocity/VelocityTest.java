@@ -9,7 +9,7 @@ import java.io.Writer;
 
 
 /**
- * Created by zongchao on 16/11/8.
+ * 16/11/8.
  */
 public class VelocityTest {
     public static void main(String[] args) {

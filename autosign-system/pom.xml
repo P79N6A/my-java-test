@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>priv.zc</groupId>
-		<artifactId>all</artifactId>
+		<artifactId>base</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>autosign-system</artifactId>

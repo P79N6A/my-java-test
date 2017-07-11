@@ -6,7 +6,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by zongchao on 17/4/5.
+ * 17/4/5.
  */
 
 @Component
