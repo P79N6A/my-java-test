@@ -17,6 +17,7 @@
         <module>test-rpc</module>
         <module>jfinal</module>
         <module>example</module>
+        <module>utils</module>
     </modules>
 
     <properties>
