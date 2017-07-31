@@ -14,4 +14,8 @@ public class HelloController extends Controller {
         setAttr("name","张三");
         renderVelocity("index.vm");
     }
+
+    public void json(){
+        renderJson("ok");
+    }
 }
