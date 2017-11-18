@@ -12,8 +12,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class EleTest {
-    static String path = "/Users/baidu/Desktop/ele/";
-    static String exportFile = "/Users/baidu/Desktop/ele.csv";
+    static String path = "/Users/i23/Desktop/ele/";
+    static String exportFile = "/Users/i23/Desktop/ele.csv";
     static String baseUrl ="https://mainsite-restapi.ele.me/shopping/restaurants?extras%5B%5D=activities&geohash=wx4expyp0dh&latitude=40.03402&limit=24&longitude=116.33151&offset=0";
     public static void main(String[] args) throws IOException {
         //https://mainsite-restapi.ele.me/shopping/restaurants?offset=0&extras%5B%5D=activities&geohash=wx4expyp0dh&latitude=40.03402&limit=24&longitude=116.33151
