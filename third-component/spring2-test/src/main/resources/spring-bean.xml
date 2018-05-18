@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:jms="http://www.springframework.org/schema/jms"
+       xmlns:lang="http://www.springframework.org/schema/spring-lang"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:tool="http://www.springframework.org/schema/spring-tool"
+       xmlns:util="http://www.springframework.org/schema/spring-util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/jee
+       http://www.springframework.org/schema/jee/spring-jee.xsd
+       http://www.springframework.org/schema/jms
+       http://www.springframework.org/schema/jms/jms.xsd
+       http://www.springframework.org/schema/spring-lang
+       http://www.springframework.org/schema/lang/spring-lang.xsd
+       http://www.springframework.org/schema/spring-tool
+       http://www.springframework.org/schema/tool/spring-tool.xsd
+       http://www.springframework.org/schema/spring-util
+       http://www.springframework.org/schema/util/spring-util.xsd
+       ">
+
+       <bean name="user_name_1" id="user-1" class="priv.zc.spring2.vo.User">
+              <property name="name" value="张三"/>
+       </bean>
+       <bean name="user_name_2" id="user-2" class="priv.zc.spring2.vo.User">
+              <property name="name" value="李四"/>
+       </bean>
+
+</beans>
