@@ -1,7 +1,7 @@
 CREATE TABLE `sign_info` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `sign_url` varchar(200) DEFAULT NULL,
-  `cookie` varchar(200) DEFAULT NULL,
+  `sign_url` varchar(1000) DEFAULT NULL,
+  `cookie` varchar(2000) DEFAULT NULL,
   `create_time` datetime DEFAULT NULL,
   `update_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
