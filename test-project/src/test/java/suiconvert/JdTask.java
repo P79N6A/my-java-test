@@ -1,23 +1,18 @@
-package test;
+package suiconvert;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.helpers.DateTimeDateFormat;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by i23 on 17/12/10.
- */
 public class JdTask {
 
-    public static void renderRow(JSONArray array,String account){
+    public static void renderRow(JSONArray array, String account) {
         String separator = "\t";
         for (int i = 0; i < array.size(); i++) {
             JSONObject obj = array.getJSONObject(i);
@@ -30,21 +25,21 @@ public class JdTask {
 
             String account1 = account;
             String account2 = "";
-            String money = obj.getString("payMoney").replace("-","");
+            String money = obj.getString("payMoney").replace("-", "");
             String member = "";
             String merchant = "";
             String project = "";
             String remark = obj.getString("showText");
-            if(remark.contains("滴滴")){
-                 cate = "行车交通";
-                 sedCate = "打车租车";
-            }else if(remark.contains("美团") || remark.contains("饿了么")){
+            if (remark.contains("滴滴")) {
+                cate = "行车交通";
+                sedCate = "打车租车";
+            } else if (remark.contains("美团") || remark.contains("饿了么")) {
                 cate = "食品酒水";
                 sedCate = "早午晚餐";
             }
             String showMoney = obj.getString("showMoney");
-            if(StringUtils.isNotBlank(showMoney)) {
-                remark += " 优惠"+showMoney;
+            if (StringUtils.isNotBlank(showMoney)) {
+                remark += " 优惠" + showMoney;
             }
 
             List<String> items = new ArrayList<String>();
@@ -54,28 +49,27 @@ public class JdTask {
             items.add(sedCate);
             items.add(account1);
             items.add(account2);
-            items.add(money.replace(",",""));
+            items.add(money.replace(",", ""));
             items.add(member);
             items.add(merchant);
             items.add(project);
             items.add(remark);
-            String line = StringUtils.join(items,separator);
+            String line = StringUtils.join(items, separator);
             System.out.println(line);
         }
     }
-    public static void jd(String jsonString){
+
+    public static void jd(String jsonString) {
         JSONObject json = JSONObject.parseObject(jsonString);
         JSONArray array = json.getJSONArray("list");
-        renderRow(array,"平安银行淘宝");
+        renderRow(array, "平安银行淘宝");
     }
 
     public static void main(String[] args) {
-//        System.out.println(convDate("12月10日 11:41"));
-        String b = "{\"list\":";
-        JdTask.jd(b);
+        JdTask.jd("");
     }
 
-    public static String convDate(String date){
+    public static String convDate(String date) {
         SimpleDateFormat df = new SimpleDateFormat("MM月dd日 HH:mm");
         Date dd;
         try {

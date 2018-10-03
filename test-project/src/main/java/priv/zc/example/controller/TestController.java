@@ -2,6 +2,7 @@ package priv.zc.example.controller;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -131,6 +132,13 @@ public class TestController {
 		System.out.println(uploadfile.getName());
 		System.out.println(uploadfile.getOriginalFilename());
 		System.out.println(uploadfile.getSize());
+		return null;
+	}
+
+	@RequestMapping("setList")
+	@ResponseBody
+	public String setList(@RequestBody  List<String> list){
+		System.out.println(list);
 		return null;
 	}
 

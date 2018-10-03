@@ -1,4 +1,4 @@
-package test;
+package suiconvert;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -7,9 +7,6 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by i23 on 17/11/18.
- */
 public class AlipayTask {
     //资产明细json转随手记csv
     public static void pinganJsonToCsv(String jsonString) {
