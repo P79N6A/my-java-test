@@ -18,6 +18,7 @@
         <module>jfinal</module>
         <module>example</module>
         <module>utils</module>
+        <module>spring-boot</module>
     </modules>
 
     <properties>
