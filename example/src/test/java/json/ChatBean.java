@@ -5,7 +5,7 @@ import java.util.List;
 import com.alibaba.fastjson.annotation.JSONField;
 
 /**
- * Created by zongchao on 18/4/10.
+ * Created by  on 18/4/10.
  */
 public class ChatBean {
 

@@ -16,7 +16,7 @@ import org.apache.hadoop.hbase.client.Scan;
 import org.apache.hadoop.hbase.client.Table;
 
 /**
- * Created by zongchao on 17/7/31.
+ * Created by  on 17/7/31.
  */
 public class JavaClient {
 

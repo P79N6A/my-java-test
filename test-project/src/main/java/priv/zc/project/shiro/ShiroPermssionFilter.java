@@ -23,7 +23,7 @@ import priv.zc.project.model.PermissionCriteria;
 /**
  * 根据url过滤权限
  * 
- * @author zongchao
+ * @author
  *
  */
 public class ShiroPermssionFilter extends AuthorizationFilter {
