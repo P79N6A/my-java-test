@@ -1,10 +1,27 @@
 package scripts.suiconvert;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class ConvUtils {
+    public static final String[] trafficWords = {"滴滴", "优步"};
+    public static final String[] mealWords = {"美团", "点评", "饿了么", "小度生活", "外卖"};
+    public static final String[] mobileWords = {"联合网络通信"};
+
     public static String[] cateConv(String keywords) {
         String cate = "其他杂项";
         String secCate = "其他支出";
-        return new String[]{cate, secCate};
+
+        if (StringUtils.containsAny(keywords, trafficWords)) {
+            cate = "行车交通";
+            secCate = "打车租车";
+        } else if (StringUtils.containsAny(keywords, mealWords)) {
+            cate = "食品酒水";
+            secCate = "早午晚餐";
+        } else if (StringUtils.containsAny(keywords, mobileWords)) {
+            cate = "交流通讯";
+            secCate = "手机费";
+        }
+        return new String[] {cate, secCate};
     }
 
     public static String accountConv(String bankName) {
