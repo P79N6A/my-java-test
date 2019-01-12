@@ -14,6 +14,10 @@ public class ConvUtils {
             return "平安银行淘宝";
         } else if (bankName.contains("零钱")) {
             return "微信零钱";
+        } else if (bankName.contains("浦发银行")) {
+            return "浦发银行";
+        } else if (bankName.contains("光大银行")) {
+            return "储蓄卡/借记卡";
         }
         return null;
     }

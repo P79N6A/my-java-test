@@ -18,7 +18,7 @@ public class JdTask {
             JSONObject obj = array.getJSONObject(i);
             String type = "支出";
 
-            String date = convDate(obj.getString("jdk7/date"));
+            String date = convDate(obj.getString("date"));
 
             String cate = "其他杂项";
             String sedCate = "其他支出";
@@ -54,6 +54,7 @@ public class JdTask {
             items.add(merchant);
             items.add(project);
             items.add(remark);
+            items.add(showMoney);
             String line = StringUtils.join(items, separator);
             System.out.println(line);
         }

@@ -272,7 +272,7 @@ public class WxTask {
             @JSONField(name = "payer_remark")
             private String payerRemark;
             @JSONField(name = "payer_uin")
-            private int payerUin;
+            private long payerUin;
             @JSONField(name = "payer_wxid")
             private String payerWxid;
             @JSONField(name = "is_friend")
@@ -432,11 +432,11 @@ public class WxTask {
                 this.payerRemark = payerRemark;
             }
 
-            public int getPayerUin() {
+            public long getPayerUin() {
                 return payerUin;
             }
 
-            public void setPayerUin(int payerUin) {
+            public void setPayerUin(long payerUin) {
                 this.payerUin = payerUin;
             }
 
