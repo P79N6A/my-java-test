@@ -13,12 +13,15 @@
         <module>frameworks/autosign-system</module>
         <module>frameworks/jfinal</module>
         <module>frameworks/spring-boot</module>
+        <module>test-rpc/dubbo-test</module>
+        <module>test-rpc/rpc-if</module>
+        <module>test-rpc/thrift-test</module>
         <module>test-project</module>
         <module>leetcode</module>
-        <module>test-rpc</module>
         <module>example</module>
         <module>utils</module>
         <module>use-jdk</module>
+        <module>test-rpc/netty-test</module>
     </modules>
 
     <properties>

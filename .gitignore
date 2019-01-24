@@ -1,8 +1,19 @@
+#eclipse
 .project
 .settings
 .classpath
+
+#idea
 *.iml
-target
 .idea
-*.DS_Store
+
+#maven
 classes
+target
+
+#mac system
+.DS_Store
+
+#vcs
+.git
+.svn
