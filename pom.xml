@@ -14,7 +14,6 @@
         <module>frameworks/jfinal</module>
         <module>frameworks/spring-boot</module>
         <module>test-rpc/dubbo-test</module>
-        <module>test-rpc/rpc-if</module>
         <module>test-rpc/thrift-test</module>
         <module>test-project</module>
         <module>leetcode</module>
@@ -60,6 +59,7 @@
         <storm.version>1.1.3</storm.version>
         <velocity-tools.version>2.0</velocity-tools.version>
         <aspectjweaver.version></aspectjweaver.version>
+        <dubbo.version>2.5.3</dubbo.version>
     </properties>
 
     <dependencyManagement>
@@ -130,6 +130,12 @@
                 <groupId>com.jolbox</groupId>
                 <artifactId>bonecp</artifactId>
                 <version>${bonecp.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
             </dependency>
 
             <!-- redis -->

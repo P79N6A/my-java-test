@@ -34,13 +34,6 @@
     </properties>
 
     <dependencies>
-        <!-- 项目内依赖 -->
-        <dependency>
-            <groupId>priv.zc.rpc</groupId>
-            <artifactId>rpc-if</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
         <!-- spring -->
         <dependency>
             <groupId>org.springframework</groupId>
