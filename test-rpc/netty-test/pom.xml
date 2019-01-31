@@ -13,5 +13,11 @@
     <groupId>priv.zc.rpc</groupId>
     <artifactId>netty-test</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.33.Final</version>
+        </dependency>
+    </dependencies>
 </project>
