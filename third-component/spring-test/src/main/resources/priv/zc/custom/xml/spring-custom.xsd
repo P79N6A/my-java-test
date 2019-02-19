@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<xsd:schema xmlns="http://www.zc.priv/schema/my"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.zc.priv/schema/my"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
+
+    <xsd:annotation>
+        <xsd:documentation>for test</xsd:documentation>
+    </xsd:annotation>
+    
+    <xsd:element name="test">
+        <xsd:complexType>
+            <xsd:attribute name="id" type="xsd:string"/>
+            <xsd:attribute name="username" type="xsd:string"/>
+            <xsd:attribute name="password" type="xsd:string"/>
+            <xsd:attribute name="age" type="xsd:integer"/>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
