@@ -11,6 +11,9 @@ import java.util.List;
 import lombok.Builder;
 import lombok.Data;
 
+/**
+ * 支付宝账单下载格式转换
+ */
 public class AlipayCsvTask {
     public static void main(String[] args) {
         alipay("");

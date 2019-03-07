@@ -32,10 +32,23 @@ public class ConvUtils {
         } else if (bankName.contains("零钱")) {
             return "微信零钱";
         } else if (bankName.contains("浦发银行")) {
-            return "浦发银行";
+            return "浦发信用卡";
         } else if (bankName.contains("光大银行")) {
             return "储蓄卡/借记卡";
         }
         return null;
+    }
+
+    public static String remarkGenerate(String... fields) {
+        StringBuilder sb = new StringBuilder();
+        for (String f : fields) {
+            if (StringUtils.isNotEmpty(f)) {
+                sb.append(f).append("_");
+            }
+        }
+        if (sb.length() > 1) {
+            sb.deleteCharAt(sb.length() - 1);
+        }
+        return sb.toString();
     }
 }
