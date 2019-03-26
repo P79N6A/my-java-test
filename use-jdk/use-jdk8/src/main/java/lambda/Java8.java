@@ -1,18 +1,42 @@
 package lambda;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Random;
+import java.util.StringJoiner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Java8 {
 
     public static void main(String[] args) {
-        Random random = new Random();
-        long ll = random.longs().limit(1).filter(e -> e > 100).findFirst().orElse(0);
-        System.out.println(ll);
+        //        stream();
+        time();
     }
 
-    public User random() {
-        return new User();
+    public static void stream() {
+        System.out.println(
+                new Random().longs(100, 0, 100).filter(e -> e < 100 && e > -100).boxed().collect(Collectors.toList()));
+        Stream.of("a", "b", "c", "d").filter(e -> e == "b").forEach(s -> System.out.println(s));
+        IntStream.range(0, 100).boxed().map(e -> "天天-" + e).map(User::random).forEach(o -> System.out.println(o));
     }
+
+    public static void lambda() {
+
+    }
+
+    public static void optional() {
+
+    }
+
+    public static void time() {
+        LocalDate localDate = LocalDate.now();
+        System.out.println(localDate);
+        LocalDateTime localDateTime = LocalDateTime.now();
+        System.out.println(localDateTime);
+    }
+
 }
 
 class User {
@@ -22,6 +46,21 @@ class User {
     private int sex;
 
     public User() {
+    }
+
+    public static User random(String name) {
+        Random random = new Random();
+        return new User(random.nextLong(), name, random.nextInt(100), random.nextInt(2));
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", User.class.getSimpleName() + "[", "]")
+                .add("id=" + id)
+                .add("name='" + name + "'")
+                .add("age=" + age)
+                .add("sex=" + sex)
+                .toString();
     }
 
     public User(Long id, String name, int age, int sex) {
